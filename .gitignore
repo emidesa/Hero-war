@@ -37,3 +37,7 @@ __screenshots__/
 
 # Vite
 *.timestamp-*-*.mjs
+
+# Env files (Vite loads them from project root)
+.env
+.env.*.local

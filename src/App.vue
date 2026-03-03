@@ -1,11 +1,27 @@
-<script setup></script>
-
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <div id="app-wrapper">
+    <NavBar />
+    <main class="main-content">
+      <router-view />
+    </main>
+  </div>
 </template>
 
-<style scoped></style>
+<script setup>
+import NavBar from './components/NavBar.vue'
+</script>
+
+<style scoped>
+#app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.main-content {
+  flex: 1;
+  padding: 24px 16px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+</style>
