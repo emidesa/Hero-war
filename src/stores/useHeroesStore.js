@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import axios from 'axios'
 
 const TOKEN = import.meta.env.VITE_SUPERHERO_TOKEN
-const BASE_URL = `https://superheroapi.com/api/${TOKEN}`
+const BASE_URL = `/superhero-api/${TOKEN}`
 
 export const useHeroesStore = defineStore('heroes', () => {
   const results = ref([])
